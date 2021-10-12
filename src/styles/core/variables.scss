@@ -1,0 +1,42 @@
+// Media Queries
+// ----------------------------------------------------------
+
+$mq: (
+  'mobile': 320px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1280px,
+  'infinity': 1440px,
+);
+
+// Guide Colors
+// ----------------------------------------------------------
+
+$colors: (
+  'transparent': transparent,
+  'white': #fff,
+  'black': #000,
+  'grey': #f2f2f2,
+  'grey-dark': #5b5b5b,
+  'green-jussi': #03ffa5,
+  'pink-jussi': #ee0e7d,
+);
+
+// Functions
+// ----------------------------------------------------------
+
+@mixin mq($mq-value) {
+  @media (min-width: map-get($mq, $mq-value)) {
+    @content;
+  }
+}
+
+@function color($color-value) {
+  @return map-get($colors, $color-value);
+}
+
+// Default variables
+// ----------------------------------------------------------
+
+$base-font-size: 62.5%;
+$font: 'Barlow', sans-serif;

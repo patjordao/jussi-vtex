@@ -1,0 +1,16 @@
+.productlist {
+  margin: 56px auto;
+  width: 100%;
+  @include mq('tablet') {
+    width: 70%;
+  }
+
+  .products {
+    @include mq('tablet') {
+      display: flex;
+      justify-content: space-between;
+    }
+    margin: 16px auto;
+    width: 100%;
+  }
+}

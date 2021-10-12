@@ -1,0 +1,30 @@
+.imagefull {
+  background: linear-gradient(90deg, color('white') 50%, color('grey') 50%);
+  padding: 64px 15%;
+
+  @include mq('tablet') {
+    display: flex;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mq('tablet') {
+      width: 36%;
+    }
+
+    .text {
+      p {
+        margin: 16px 0;
+        width: 70%;
+      }
+    }
+
+    button {
+      background-color: color('white');
+      border: 1px solid color('black');
+    }
+  }
+}

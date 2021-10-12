@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  @include mq('tablet') {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+
+    li {
+      margin: 0 16px;
+    }
+  }
+}
+
+.contato {
+  background: color('pink-jussi');
+  padding: 136px 5%;
+  text-align: center;
+
+  @include mq('laptop') {
+    padding: 136px 25%;
+  }
+
+  h2 {
+    color: color('white');
+    margin-bottom: 32px;
+  }
+  p {
+    color: color('white');
+    margin-bottom: 8px;
+  }
+  a {
+    @include body-bigger();
+    color: color('white');
+  }
+}
+
+.subscribe {
+  background: color('black');
+  padding: 136px 5%;
+  text-align: center;
+
+  @include mq('laptop') {
+    padding: 136px 31%;
+  }
+
+  div {
+    align-items: center;
+    border-bottom: 2px color('green-jussi') solid;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+
+    input {
+      background: transparent;
+      border: none;
+
+      @include body-regular();
+      color: color('white');
+    }
+    ::placeholder {
+      color: color('white');
+    }
+
+    button {
+      background: black;
+      color: color('green-jussi');
+      border: none;
+      padding: 0 0 12px;
+    }
+  }
+
+  h2,
+  p {
+    color: color('white');
+  }
+}
+
+footer {
+  align-items: center;
+  background: color('black');
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+  }
+  @include mq('laptop') {
+    padding: 16px 15%;
+  }
+}

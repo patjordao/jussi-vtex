@@ -1,0 +1,99 @@
+// Headlines
+@mixin headline-h1 {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 76px;
+  text-transform: uppercase;
+}
+
+@mixin headline-h2($weight: 700) {
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: 32px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+@mixin headline-h3($weight: 500) {
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include mq('laptop') {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin body-bigger($weight: 500) {
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: 32px;
+  line-height: 24px;
+}
+
+@mixin body-regular($weight: 500) {
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin body-small($weight: 500) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin link($weight: 700) {
+  color: color('links');
+
+  @include body-regular($weight);
+
+  &:hover {
+    color: color('pink-jussi');
+    text-decoration: none;
+  }
+}
+
+p {
+  @include body-regular();
+}
+
+h1 {
+  @include headline-h1();
+}
+
+h2 {
+  @include headline-h2();
+
+  span {
+    color: color('green-jussi');
+  }
+}
+
+a {
+  color: color('black');
+
+  @include link(500);
+}
+
+button {
+  background: color('green-jussi');
+  border-radius: 6px;
+  border: 1px solid color('green-jussi');
+  margin-top: 16px;
+  padding: 12px 24px;
+  width: max-content;
+
+  @include body-regular();
+}

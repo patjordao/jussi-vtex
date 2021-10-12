@@ -1,0 +1,26 @@
+.hero {
+  background: color('green-jussi');
+  padding: 40px 10% 0;
+
+  @include mq('tablet') {
+    display: flex;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 46%;
+
+    .text {
+      p {
+        margin: 16px 0;
+        width: 70%;
+      }
+    }
+
+    button {
+      border: 1px solid color('black');
+    }
+  }
+}
